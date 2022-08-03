@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists</title>
+</head>
+<body>
+    <h2>Random Numbers</h2>
+    <ul>
+        {% for num in random_numbers: %}
+            <li>{{ num }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users: %}
+                <tr>
+                    <td>{{ user ['name'] }}</td>
+                    <td>{{ user ['age'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+    <!-- ANOTHER WAY TO DO IT  -->
+
+    <!-- <h1>Random Numbers</h1>
+    {% for number in random_numbers %}
+        <p>{{ number }}</p>
+    {% endfor %}
+    <h1>Students</h1>
+    {% for student in students %}
+        <p>{{ student['name'] }} - {{ student['age'] }}</p>
+    {% endfor %} -->
+
+</body>
+</html>

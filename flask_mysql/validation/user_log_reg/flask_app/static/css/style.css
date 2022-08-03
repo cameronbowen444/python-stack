@@ -1,0 +1,15 @@
+.box{
+    margin: 15px;
+    padding: 15px;
+    background-color: grey;
+    color: white;
+    width: 500px;
+    height: 825px;
+}
+.btn1{
+    border-color: white;
+    color: white;
+}
+.flash{
+    background-color: lightcoral;
+}

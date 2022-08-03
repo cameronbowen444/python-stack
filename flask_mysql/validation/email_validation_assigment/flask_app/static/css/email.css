@@ -1,0 +1,15 @@
+
+.mb-3{
+    width: 500px;
+    padding: 50px;
+    background-color: royalblue;
+    color: white;
+}
+.btn{
+    margin-top: 10px;
+}
+.back{
+    background-color: red;
+    color: black;
+    padding: 5px;
+}

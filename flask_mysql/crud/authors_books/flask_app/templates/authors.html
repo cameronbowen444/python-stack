@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/authors.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="box">
+                    <h1 class="head">New Author</h1>
+                    <div class="mb-3">
+                        <form action="/newauthor" method="post">
+                            <label for="formGroupExampleInput" class="form-label">Author Name:</label>
+                            <input type="text" class="form-control" name="name">
+                            <input type="submit" class="btn btn-primary button" role="button" value="Create">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="box">
+                    <h1 class="head">All Authors</h1>
+                    <div class="list-group">
+                        {% for authors in all_authors %}
+                            <a href="/author/{{authors.id}}" class="list-group-item">{{authors.name}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="btn2">
+                    <a class="btn btn-primary" href="/books" role="button">Add Book</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

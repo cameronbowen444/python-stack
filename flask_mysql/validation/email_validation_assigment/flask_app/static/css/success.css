@@ -1,0 +1,22 @@
+.mb-3{
+    width: 700px;
+    padding: 50px;
+    background-color: royalblue;
+    color: white;
+}
+h5{
+    text-decoration: underline;
+}
+table{
+    margin-top: 20px;
+}
+thead{
+    background-color: white;
+}
+tbody{
+    background-color: white;
+}
+.right{
+    background: green;
+    color: black;
+}

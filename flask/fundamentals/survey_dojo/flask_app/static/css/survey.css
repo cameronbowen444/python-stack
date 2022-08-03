@@ -1,0 +1,23 @@
+
+body{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+#back{
+    margin-top: 50px;
+}
+h1 {
+    color: goldenrod;
+}
+.form1{
+    width: 600px;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    padding: 35px;
+    background-color: rgb(49, 49, 49);
+}
+.space{
+    margin: 8px auto;
+}

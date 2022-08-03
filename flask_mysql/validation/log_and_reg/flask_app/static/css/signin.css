@@ -1,0 +1,22 @@
+.box{
+    width: 500px;
+    height: auto;
+    margin: 10px;
+    padding: 20px 20px 90px 20px;
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+.box1{
+    width: 500px;
+    height: 650px;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(82, 82, 82);
+    color: white;
+}
+.head1{
+    color: dodgerblue;
+}
+.head2{
+    color: mediumseagreen;
+}

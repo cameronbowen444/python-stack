@@ -1,0 +1,41 @@
+.headbtn{
+    margin-right: 40px;
+}
+.box{
+    background-color: rgb(61, 60, 60);
+    margin: 25px;
+    padding: 25px;
+    color: white;
+}
+.head{
+    color: rgb(48, 91, 221);
+    text-align: center;
+    margin: 10px;
+}
+.head1{
+    color: rgb(48, 91, 221);
+    margin: 10px;
+}
+.mb-3{
+    margin: 10px;
+}
+.button{
+    margin-top: 25px;
+}
+.list-group-item{
+    background-color: rgb(61, 60, 60);
+    color: goldenrod;
+    text-align: left;
+    border: none;
+}
+.list-group-item:hover{
+    color: darkgoldenrod;
+}
+.btn1{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 270px 20px 0px;
+}
+.table{
+    background-color: white;
+}

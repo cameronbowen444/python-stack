@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/checkers.css') }}">
+    <title>Checkers</title>
+</head>
+<body>
+    <h1>***Checkerboard***</h1>
+    <div id="container">
+        {% for y in range(0,y): %}
+            {% if y % 2 == 0: %}
+                <div class="row">
+                {% for x in range(0,x): %}
+                    {% if x % 2 == 0: %}
+                        <div class="box1" style="background-color: {{ box1c }};"></div>
+                    {% elif x % 2 == 1: %}
+                        <div class="box2" style="background-color: {{ box2c }};"></div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% elif y % 2 == 1: %}
+                <div class="row">
+                {% for x in range(0,x): %}
+                    {% if x % 2 == 0: %}
+                        <div class="box2" style="background-color: {{ box2c }};"></div>
+                    {% elif x % 2 == 1: %}
+                        <div class="box1" style="background-color: {{ box1c }};"></div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endfor %}
+
+        <!-- <div class="row">
+            <div class="box2"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box1"></div>
+        </div> -->
+        <!-- <div class="row">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div> -->
+    </div>
+</body>
+</html>

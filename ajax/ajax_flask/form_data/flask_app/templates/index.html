@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Names</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <script src="{{  url_for('static', filename='js/site.js')}}" async></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand">Users With AJAX</a>
+            <form class="d-flex">
+                <button class="btn btn-outline-success" type="button">Just wanted a button</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="text-center">Here are the Users</h1>
+        <div class="row justify-content-around">
+            <div class="col-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Username</th>
+                            <th scope="col">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+                <form action="/new_destination" id="myForm" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Username</label>
+                        <input type="text" name="user_name" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" name="email" class="form-control">
+                    </div>
+                    <input type="submit" id="submit_btn" class="btn btn-primary" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

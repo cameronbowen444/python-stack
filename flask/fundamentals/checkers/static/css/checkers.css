@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: red;
+}
+#container {
+    margin: 0 auto;
+    height: auto;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+.box1{
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+}
+.box2{
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+}

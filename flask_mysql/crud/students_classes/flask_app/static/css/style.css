@@ -1,0 +1,15 @@
+.box{
+    padding: 10px;
+    margin: 15px;
+}
+.head{
+    text-align: center;
+    margin: 10px -10px;
+    background-color: #0d6efd;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+.btn1{
+    margin-right: 10px;
+}

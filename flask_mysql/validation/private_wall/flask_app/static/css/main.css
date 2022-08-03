@@ -1,0 +1,18 @@
+h1{
+    background-color: #1e3c72;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+#box{
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    margin-top: 75px;
+    background-color: #1e3c72;
+    border-radius: 4px;
+    color: white;
+}
+body{
+    background-image: url("/static/img/photo.jpeg");
+}

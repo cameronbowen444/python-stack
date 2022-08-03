@@ -1,0 +1,21 @@
+.box{
+    margin-top: 10px;
+    padding: 25px;
+    background-color: rgb(61, 60, 60);
+    color: white;
+}
+.head{
+    color: rgb(48, 91, 221);
+    margin: 10px;
+}
+.mb-3{
+    margin: 15px 0px;
+}
+.button{
+    margin-top: 15px;
+}
+.btn2{
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}

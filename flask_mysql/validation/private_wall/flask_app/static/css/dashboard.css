@@ -1,0 +1,83 @@
+h1{
+    background-color: #2050a8;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+nav{
+    margin-bottom: 20px;
+    background-color: dimgrey;
+}
+.right{
+    display: flex;
+    align-items: flex-start;
+}
+.name{
+    margin-right: 30px;
+    color: white;
+    background-color: #1e3c72;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+.box{
+    width: 500px;
+    height: 700px;
+    padding: 20px 50px;
+    border-radius: 4px;
+    color: white;
+    background-color: lightblue;
+    border: 2px solid #1e3c72;
+}
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.reg{
+    margin-bottom: 50px;
+}
+.img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+body{
+    background-image: url("/static/img/back3.jpeg");
+    background-size: cover;
+}
+.mb-3, input, label{
+    color: black;
+}
+.btn2{
+    border-color: white;
+    color: white;
+}
+.btn2:hover{
+    background-color: white;
+    color: black;
+}
+.btn1{
+    margin: 10px 0px;
+}
+.message_box{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: lightblue;
+}
+.form-select{
+    margin-bottom: 10px;
+}
+.box1{
+    width: 350px;
+    height: 350px;
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+.divide{
+    margin-top: 25px;
+
+}

@@ -1,0 +1,31 @@
+.thead{
+    color: white;
+    font-weight: lighter;
+}
+.btn1{
+    color: white;
+    border-color: white;
+}
+.btn1:hover{
+    border-color: white;
+    background-color: darkblue;
+}
+.col-4{
+    margin: 10px;
+    padding: 10px;
+}
+.bhead{
+    margin-bottom: 15px;
+    background-color: rgb(86, 168, 196);
+    padding: 10px;
+    color: white;
+}
+.card-span{
+    background-color: rgb(86, 168, 196);
+    padding: 5px 10px;
+    margin: 5px;
+    font-weight: lighter;
+}
+.card-text{
+    font-weight: bold;
+}

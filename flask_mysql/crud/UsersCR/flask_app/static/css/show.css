@@ -1,0 +1,27 @@
+body {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+    height: auto;
+}
+#info{
+    border: 1px solid black;
+    margin: 15px 0px;
+    padding: 15px;
+}
+.form-control{
+    border-color: black;
+}
+.home{
+    text-align: right;
+    margin: 10px 0px;
+}
+h5{
+    padding: 10px 0px;
+}

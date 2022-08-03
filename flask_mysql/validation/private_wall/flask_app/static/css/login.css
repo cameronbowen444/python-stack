@@ -1,0 +1,57 @@
+h1{
+    background-color: #2050a8;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+nav{
+    margin-bottom: 20px;
+    background-color: dimgrey;
+}
+#box{
+    width: 600px;
+    height: auto;
+    padding: 20px 50px;
+    border-radius: 4px;
+    color: white;
+    border: 2px solid #1e3c72;
+}
+.imgdiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.reg{
+    margin-bottom: 50px;
+}
+.img{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+body{
+    background-image: url("/static/img/back3.jpeg");
+    background-size: cover;
+}
+.mb-3, input, label{
+    color: black;
+}
+.btn1{
+    margin: 10px 45px;
+    padding: 10px 0px;
+}
+.btn1:hover{
+    background-color: #2050a8;
+}
+.btn2{
+    border-color: white;
+}
+.btn2:hover{
+    background-color: white;
+    color: black;
+}
+.message{
+    background-color: lightcoral;
+    color: black;
+}

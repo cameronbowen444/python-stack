@@ -1,0 +1,135 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
+-- Schema books
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `books` ;
+
+-- -----------------------------------------------------
+-- Schema books
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `books` ;
+USE `books` ;
+
+-- -----------------------------------------------------
+-- Table `books`.`authors`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `books`.`authors` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `books`.`books`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `books`.`books` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NULL,
+  `num_of_pages` INT NULL,
+  `created_at` DATETIME NULL,
+  `updated_at` DATETIME NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `books`.`favorites`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `books`.`favorites` (
+  `authors_id` INT NOT NULL,
+  `books_id` INT NOT NULL,
+  INDEX `fk_favorites_authors_idx` (`authors_id` ASC) VISIBLE,
+  INDEX `fk_favorites_books1_idx` (`books_id` ASC) VISIBLE,
+  CONSTRAINT `fk_favorites_authors`
+    FOREIGN KEY (`authors_id`)
+    REFERENCES `books`.`authors` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_favorites_books1`
+    FOREIGN KEY (`books_id`)
+    REFERENCES `books`.`books` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+QUERYS TO RUN: 
+
+SELECT * 
+FROM authors;
+
+INSERT INTO `books`.`authors` (`name`, `created_at`, `updated_at`) 
+VALUES ('Jane Austen', NOW(), NOW());
+
+INSERT INTO `books`.`authors` (`name`, `created_at`, `updated_at`) 
+VALUES ('Emily Dickinson', NOW(), NOW());
+
+INSERT INTO `books`.`authors` (`name`, `created_at`, `updated_at`) 
+VALUES ('Fyodor Dostoevsky', NOW(), NOW());
+
+INSERT INTO `books`.`authors` (`name`, `created_at`, `updated_at`) 
+VALUES ('William Shakespeare', NOW(), NOW());
+
+INSERT INTO `books`.`authors` (`name`, `created_at`, `updated_at`) 
+VALUES ('Lau Tzu', NOW(), NOW());
+
+INSERT INTO `books`.`books` (`title`, `num_of_pages`, `created_at`, `updated_at`) 
+VALUES ('C Sharp', 100, NOW(), NOW());
+
+INSERT INTO `books`.`books` (`title`, `num_of_pages`, `created_at`, `updated_at`) 
+VALUES ('Java', 100, NOW(), NOW());
+
+INSERT INTO `books`.`books` (`title`, `num_of_pages`, `created_at`, `updated_at`) 
+VALUES ('Python', 100, NOW(), NOW());
+
+INSERT INTO `books`.`books` (`title`, `num_of_pages`, `created_at`, `updated_at`) 
+VALUES ('PHP', 100, NOW(), NOW());
+
+INSERT INTO `books`.`books` (`title`, `num_of_pages`, `created_at`, `updated_at`) 
+VALUES ('Ruby', 100, NOW(), NOW());
+
+UPDATE `books`.`books` SET `title` = 'C #' 
+WHERE (`id` = '1');
+
+UPDATE `books`.`authors` SET `name` = 'Bill Shakespeare' 
+WHERE (`id` = '4');
+
+
+INSERT INTO favorites (author_id,book_id)
+VALUES (1,1),(1,2),(2,1),(2,2),(2,3),(3,1),(3,2),(3,3),(3,4),(4,1),(4,2),(4,3),(4,4),(4,5);
+
+SELECT *
+FROM books
+JOIN favorites ON books.id = favorites.books_id
+JOIN authors ON authors.id = favorites.authors_id
+WHERE books.id = 3;
+
+DELETE FROM `books`.`favorites` WHERE (`id` = '5');
+
+INSERT INTO `books`.`favorites` (`authors_id`, `books_id`) VALUES ('5', '2');
+
+SELECT * FROM authors
+JOIN favorites ON authors.id = favorites.authors_id
+JOIN books ON books.id = favorites.books_id
+WHERE authors.id = 3;
+
+SELECT * FROM books
+LEFT JOIN favorites ON books.id = favorites.books_id
+LEFT JOIN authors ON authors.id = favorites.authors_id
+WHERE books.id = 5;

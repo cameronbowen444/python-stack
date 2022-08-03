@@ -1,0 +1,10 @@
+SELECT * 
+FROM tweets;
+
+INSERT INTO `twitter`.`tweets` (`tweet`, `user_id`, `created_at`, `updated_at`) 
+VALUES ('HELLO WORLD', '2', '2022-01-12 00:00:01', '2022-01-12 00:00:01');
+
+UPDATE `twitter`.`tweets` SET `user_id` = '1' WHERE (`id` = '1');
+
+UPDATE `twitter`.`tweets` SET `tweet` = 'hello world, I\'m CAMERON' WHERE (`id` = '14');
+DELETE FROM `twitter`.`tweets` WHERE (`id` = '29');

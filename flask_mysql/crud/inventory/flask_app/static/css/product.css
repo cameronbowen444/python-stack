@@ -1,0 +1,22 @@
+.button{
+    text-align: right;
+}
+.container{
+    background-color: grey;
+    padding: 25px;
+    margin-top: 25px;
+    color: white;
+}
+.button{
+    text-align: right;
+}
+.content{
+    margin: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: gold;
+}

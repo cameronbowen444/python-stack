@@ -1,0 +1,17 @@
+.container{
+    width: 500px;
+    margin-top: 25px;
+    padding: 15px;
+    background-color: gray;
+    color: white;
+}
+.head{
+    text-align: center;
+    color: rgb(51, 68, 165);
+}
+.body{
+    padding: 15px;
+}
+span{
+    color: lightblue;
+}
